@@ -1,5 +1,6 @@
 ---
 name: "prereq-buildstep"
+# SCM: https://bitbucket.org/henriklynggaard/prereq-buildstep-plugin/
 paths:
   - "org/jvnet/hudson/plugins/prereq-buildstep"
 developers: []

@@ -1,5 +1,6 @@
 ---
 name: "build-requester"
+github: "project-ncl/jenkins-pnc-build-requester"
 paths:
   - "com/redhat/jenkins/plugins/build-requester"
 developers:

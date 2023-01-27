@@ -1,5 +1,6 @@
 ---
 name: "openscada-jenkins-exporter"
+# SCM: git.openscada.org/org.openscada.contrib.git
 paths:
   - "org/openscada/jenkins/openscada-jenkins-exporter"
 developers: []

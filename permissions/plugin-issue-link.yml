@@ -1,5 +1,6 @@
 ---
 name: "issue-link"
+github: "Diabol/issue-link-plugin"
 paths:
   - "org/jenkins-ci/plugins/issue-link"
 developers:

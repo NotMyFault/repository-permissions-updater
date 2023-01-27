@@ -1,5 +1,6 @@
 ---
 name: "ikachan"
+github: "kentaro/jenkins-ikachan-plugin"
 paths:
   - "org/jenkins-ci/ruby-plugins/ikachan"
-developers: []
+developers: [] # Suspended during the ruby deprecation: https://www.jenkins.io/blog/2021/12/22/deprecated-ruby-runtime/

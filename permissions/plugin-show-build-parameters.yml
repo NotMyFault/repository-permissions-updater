@@ -1,5 +1,6 @@
 ---
 name: "show-build-parameters"
+github: "petehayes/show-build-parameters-plugin"
 paths:
   - "org/jenkins-ci/plugins/show-build-parameters"
 developers: []

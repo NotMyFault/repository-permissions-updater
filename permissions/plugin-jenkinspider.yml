@@ -2,5 +2,4 @@
 name: "jenkinspider"
 paths:
   - "org/jenkins-ci/ruby-plugins/jenkinspider"
-developers:
-  - "nbugash"
+developers: [] # Suspended during the ruby deprecation: https://www.jenkins.io/blog/2021/12/22/deprecated-ruby-runtime/

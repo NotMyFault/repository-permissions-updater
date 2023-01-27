@@ -1,5 +1,6 @@
 ---
 name: "rubymotion"
+github: "RubyMotionJP/jenkins-rubymotion-plugin"
 paths:
   - "org/jenkins-ci/ruby-plugins/rubymotion"
 developers:

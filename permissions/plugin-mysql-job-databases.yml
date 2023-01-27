@@ -1,6 +1,6 @@
 ---
 name: "mysql-job-databases"
+github: "codevise/jenkins-mysql-job-databases-plugin"
 paths:
   - "org/jenkins-ci/ruby-plugins/mysql-job-databases"
-developers:
-  - "tfischbach"
+developers: [] # Suspended during ruby deprecation: https://www.jenkins.io/blog/2021/12/22/deprecated-ruby-runtime/

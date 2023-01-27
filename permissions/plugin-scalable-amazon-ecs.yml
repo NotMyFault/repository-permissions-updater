@@ -1,5 +1,6 @@
 ---
 name: "scalable-amazon-ecs"
+github: "roehrijn/amazon-ecs-plugin-roehrijn-fork"
 paths:
   - "com/cloudbees/jenkins/plugins/scalable-amazon-ecs"
 developers:

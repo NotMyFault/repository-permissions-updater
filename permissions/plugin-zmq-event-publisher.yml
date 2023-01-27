@@ -1,6 +1,6 @@
 ---
 name: "zmq-event-publisher"
+# SCM: https://opendev.org/x/zmq-event-publisher/src/branch/master
 paths:
   - "org/jenkins-ci/plugins/zmq-event-publisher"
-developers:
-  - "openstackjenkins"
+developers: [] # Abandoned and retired

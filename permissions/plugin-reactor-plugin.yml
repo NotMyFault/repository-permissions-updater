@@ -1,5 +1,6 @@
 ---
 name: "reactor-plugin"
+github: "magnayn/reactor-plugin"
 paths:
   - "com/nirima/reactor-plugin"
 developers:

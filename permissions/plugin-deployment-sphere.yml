@@ -1,5 +1,6 @@
 ---
 name: "deployment-sphere"
+github: "jenkinsci/deployment-sphere-plugin"
 paths:
   - "org/jenkins-ci/plugins/deployment-sphere"
 developers:

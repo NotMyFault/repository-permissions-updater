@@ -1,6 +1,6 @@
 ---
 name: "monkit-plugin"
+github: "Praqma/MonKit-Plugin"
 paths:
   - "net/praqma/monkit-plugin"
-developers:
-  - "madsnielsen"
+developers: [] # Suspended: https://groups.google.com/g/jenkinsci-dev/c/1bIdZr8P_Ms

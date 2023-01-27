@@ -2,4 +2,4 @@
 name: "cucumber"
 paths:
   - "org/jenkins-ci/ruby-plugins/cucumber"
-developers: []
+developers: [] # Suspended in favor of ruby deprecation: https://www.jenkins.io/blog/2021/12/22/deprecated-ruby-runtime/

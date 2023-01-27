@@ -1,5 +1,6 @@
 ---
 name: "tool-labels-plugin"
+# SCM: https://bitbucket.org/kazssym/jenkins-tool-labels-plugin
 paths:
   - "org/jenkins-ci/plugins/tool-labels-plugin"
 developers:

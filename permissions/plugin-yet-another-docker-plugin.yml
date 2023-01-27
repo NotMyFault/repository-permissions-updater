@@ -1,5 +1,6 @@
 ---
 name: "yet-another-docker-plugin"
+github: "KostyaSha/yet-another-docker-plugin"
 paths:
   - "com/github/kostyasha/yet-another-docker/yet-another-docker-plugin"
 developers:

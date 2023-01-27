@@ -1,5 +1,6 @@
 ---
 name: "ColumnsPlugin"
+github: "hanabishi/ColumnPack"
 paths:
   - "org/jenkins-ci/plugins/ColumnsPlugin"
 developers: []

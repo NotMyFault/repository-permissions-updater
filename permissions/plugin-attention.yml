@@ -1,5 +1,6 @@
 ---
 name: "attention"
+github: "hanabishi/attention"
 paths:
   - "org/jenkins-ci/plugins/attention"
 developers:

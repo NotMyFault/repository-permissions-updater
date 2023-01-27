@@ -1,5 +1,6 @@
 ---
 name: "project-health-report"
+# SCM: https://bitbucket.org/henriklynggaard/project-health-report-plugin/
 paths:
   - "org/jvnet/hudson/plugins/project-health-report"
 developers: []

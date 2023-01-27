@@ -1,5 +1,6 @@
 ---
 name: "nopmdcheck"
+github: "Quramy/nopmdcheck"
 paths:
   - "org/jenkins-ci/plugins/nopmdcheck"
 developers: []

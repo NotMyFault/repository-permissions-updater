@@ -1,5 +1,6 @@
 ---
 name: "oki-docki"
+github: "jenkinsci/docker-custom-build-environment-plugin"
 paths:
   - "com/cloudbees/jenkins/plugins/oki-docki"
 developers: []

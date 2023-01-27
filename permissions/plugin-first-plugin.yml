@@ -1,6 +1,6 @@
 ---
 name: "first-plugin"
+github: "Praqma/First"
 paths:
   - "net/praqma/first-plugin"
-developers:
-  - "praqma"
+developers: [] # https://issues.jenkins.io/browse/INFRA-1108

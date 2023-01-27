@@ -1,6 +1,6 @@
 ---
 name: "perl-smoke-test"
+github: "melezhik/perl-smoke-test-plugin"
 paths:
   - "org/jenkins-ci/ruby-plugins/perl-smoke-test"
-developers:
-  - "melezhik"
+developers: [] # Suspended during ruby deprecation: https://www.jenkins.io/blog/2021/12/22/deprecated-ruby-runtime/

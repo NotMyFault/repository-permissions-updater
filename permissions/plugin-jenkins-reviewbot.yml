@@ -1,6 +1,6 @@
 ---
 name: "jenkins-reviewbot"
+github: "vmware-archive/jenkins-reviewbot"
 paths:
   - "org/jenkins-ci/plugins/jenkins-reviewbot"
-developers:
-  - "yardena"
+developers: [] # The repository is archived and no longer maintained

@@ -1,5 +1,6 @@
 ---
 name: "nopmdverifytrac"
+github: "Quramy/nopmdverifytrac"
 paths:
   - "org/jenkins-ci/plugins/nopmdverifytrac"
 developers: []

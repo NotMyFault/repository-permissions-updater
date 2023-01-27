@@ -1,5 +1,6 @@
 ---
 name: "svn-workspace-cleaner"
+github: "davidparsson/svn-workspace-cleaner-plugin"
 paths:
   - "org/jenkins-ci/plugins/svn-workspace-cleaner"
 developers:

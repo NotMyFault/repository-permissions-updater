@@ -1,5 +1,6 @@
 ---
 name: "nexus-task-runner"
+github: "Quramy/nexus-task-runner"
 paths:
   - "org/jenkins-ci/plugins/nexus-task-runner"
 developers: []

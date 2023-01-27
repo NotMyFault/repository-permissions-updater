@@ -1,5 +1,6 @@
 ---
 name: "pragprog"
+# SCM: https://bitbucket.org/torsten_ehrhorn/pragprog/
 paths:
   - "org/jenkins-ci/plugins/pragprog"
 developers:

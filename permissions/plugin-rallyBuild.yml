@@ -1,5 +1,6 @@
 ---
 name: "rallyBuild"
+github: "joshughes/rallyBuild"
 paths:
   - "org/jenkins-ci/plugins/rallyBuild"
 developers: []

@@ -1,5 +1,6 @@
 ---
 name: "project-inheritance"
+github: "i-m-c/jenkins-inheritance-plugin"
 paths:
   - "hudson/plugins/project-inheritance"
 developers:

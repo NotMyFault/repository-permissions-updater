@@ -1,5 +1,6 @@
 ---
 name: "jucies"
+github: "jucies/jucies-plugin"
 paths:
   - "org/jenkins-ci/plugins/jucies"
 developers:

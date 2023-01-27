@@ -1,5 +1,6 @@
 ---
 name: "deploydb"
+github: "rtyler/deploydb-jenkins-plugin"
 paths:
   - "org/jenkins-ci/plugins/deploydb"
 developers:

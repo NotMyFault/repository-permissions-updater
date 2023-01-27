@@ -1,5 +1,6 @@
 ---
 name: "workflow-stm"
+github: "jenkinsci/workflow-plugin"
 paths:
   - "org/jenkins-ci/plugins/workflow/workflow-stm"
 developers:

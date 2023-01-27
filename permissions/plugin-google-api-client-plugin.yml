@@ -1,5 +1,6 @@
 ---
 name: "google-api-client-plugin"
+# SCM: https://bitbucket.org/kazssym/hudson-google-api-client-plugin/src/master/
 paths:
   - "org/jenkins-ci/plugins/google-api-client-plugin"
 developers:
