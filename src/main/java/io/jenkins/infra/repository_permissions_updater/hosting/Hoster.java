@@ -279,7 +279,7 @@ public class Hoster {
             team.remove(github.getMyself());
         }
 
-        t.add(r, GHOrganization.Permission.ADMIN); // make team an admin on the given repository, always do in case the config is wrong
+        t.add(r, GHOrganization.Permission.MAINTAIN);
         return t;
     }
 
