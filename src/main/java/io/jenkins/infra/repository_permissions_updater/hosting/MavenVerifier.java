@@ -1,6 +1,8 @@
 package io.jenkins.infra.repository_permissions_updater.hosting;
 
-import static io.jenkins.infra.repository_permissions_updater.hosting.HostingChecker.LOWEST_JENKINS_VERSION;
+import static io.jenkins.infra.repository_permissions_updater.hosting.Requirements.LOWEST_JENKINS_VERSION;
+import static io.jenkins.infra.repository_permissions_updater.hosting.Requirements.LOWEST_PARENT_POM_VERSION;
+import static io.jenkins.infra.repository_permissions_updater.hosting.Requirements.PARENT_POM_WITH_JENKINS_VERSION;
 import static java.util.regex.Pattern.CASE_INSENSITIVE;
 
 import edu.umd.cs.findbugs.annotations.SuppressFBWarnings;
@@ -52,9 +54,6 @@ public class MavenVerifier implements BuildSystemVerifier {
     private static final int MAX_LENGTH_OF_ARTIFACT_ID = 37;
     private static final Logger LOGGER = LoggerFactory.getLogger(MavenVerifier.class);
 
-    public static final Version LOWEST_PARENT_POM_VERSION = new Version(5, 24);
-    public static final Version PARENT_POM_WITH_JENKINS_VERSION = new Version(2);
-
     public static final String INVALID_POM = "The pom.xml file in the root of the origin repository is not valid";
     public static final String SPECIFY_LICENSE =
             "Please specify a license in your pom.xml file using the &lt;licenses&gt; tag. See https://maven.apache.org/pom.html#Licenses for more information.";
@@ -101,6 +100,9 @@ public class MavenVerifier implements BuildSystemVerifier {
                             checkDependencyManagement(model, hostingIssues);
                             checkDevelopersTag(model, hostingIssues);
                             checkProperties(model, hostingIssues);
+                            if (issue.isEnableCD()) {
+                                checkAutomaticReleasesSettings(model, hostingIssues);
+                            }
                         } catch (Exception e) {
                             LOGGER.error("Failed looking at pom.xml", e);
                             hostingIssues.add(
@@ -124,12 +126,26 @@ public class MavenVerifier implements BuildSystemVerifier {
         return HostingChecker.fileExistsInRepo(issue, "pom.xml");
     }
 
+    private void checkAutomaticReleasesSettings(Model model, HashSet<VerificationMessage> hostingIssues) {
+        Properties props = model.getProperties();
+        if (!props.containsKey("changelist") || !props.getProperty("changelist").equals("999999-SNAPSHOT")) {
+            hostingIssues.add(new VerificationMessage(
+                    VerificationMessage.Severity.REQUIRED,
+                    "The property `changelist` must be defined and set to `999999-SNAPSHOT` when CD is enabled."));
+        }
+        String version = model.getVersion();
+        if (!version.contains("${changelist}")) {
+            hostingIssues.add(new VerificationMessage(
+                    VerificationMessage.Severity.REQUIRED,
+                    "The version in the pom.xml must contain `${changelist}` when CD is enabled."));
+        }
+    }
+
     private void checkArtifactId(Model model, String forkTo, HashSet<VerificationMessage> hostingIssues) {
         try {
             if (StringUtils.isBlank(forkTo)) {
                 hostingIssues.add(new VerificationMessage(
-                        VerificationMessage.Severity.REQUIRED,
-                        "Missing value in Jira for 'New Repository Name' field"));
+                        VerificationMessage.Severity.REQUIRED, "Missing value for 'New Repository Name' field"));
             }
 
             String groupId = model.getGroupId();
@@ -420,6 +436,7 @@ public class MavenVerifier implements BuildSystemVerifier {
                                 && d.getArtifactId().startsWith("bom-"))
                         .findFirst();
             }
+
             Set<String> managedDependencies;
             String bomArtifactId = "bom-" + jenkinsVersion.baseline() + ".x";
             String latestReleasedBom = getLatestBomVersion(bomArtifactId);
@@ -558,7 +575,7 @@ public class MavenVerifier implements BuildSystemVerifier {
             try {
                 String version = interpolator.interpolate(props.getProperty("jenkins.version"));
                 String baseline = interpolator.interpolate(props.getProperty("jenkins.baseline"));
-                if (baseline == null) {
+                if (baseline == null || baseline.isBlank()) {
                     Matcher m = Pattern.compile("(\\d\\.\\d+)(|\\.\\d)").matcher(version);
                     if (m.matches()) {
                         baseline = m.group(1);
